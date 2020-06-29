@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="site-wrap">
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <HeaderComp></HeaderComp>
+    <router-view :appConfig="appConfig"></router-view>
+    <FooterComp></FooterComp>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComp from "./components/HeaderComp";
+import FooterComp from "./components/FooterComp";
+import config from "../config";
 
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      appConfig: config
+    };
+  },
   components: {
-    HelloWorld
+    HeaderComp,
+    FooterComp
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
