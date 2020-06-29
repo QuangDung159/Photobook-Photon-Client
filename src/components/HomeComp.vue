@@ -7,7 +7,10 @@
           <div class="image-wrap">
             <div class="image-info">
               <h2 class="mb-3">{{album.album_name}}</h2>
-              <a href="single.html" class="btn btn-outline-white py-2 px-4">More Photos</a>
+              <router-link
+                :to="'/gallery/' + album.album_id"
+                class="btn btn-outline-white py-2 px-4"
+              >More Photos</router-link>
             </div>
             <img :src="album.post_panel_image" alt="Image" />
           </div>
