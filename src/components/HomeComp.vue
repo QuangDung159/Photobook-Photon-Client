@@ -1,9 +1,19 @@
 <template>
-  <div class="container-fluid" data-aos="fade" data-aos-delay="500">
-    <div class="swiper-container images-carousel">
-      <div class="swiper-wrapper">
+  <div class="container-fluid aos-init aos-animate" data-aos="fade" data-aos-delay="500">
+    <div
+      class="swiper-container images-carousel swiper-container-horizontal swiper-container-free-mode"
+    >
+      <div
+        class="swiper-wrapper"
+        style="transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"
+      >
         <!-- slider -->
-        <div class="swiper-slide" v-for="(album, key) in listAlbum" :key="key">
+        <div
+          class="swiper-slide"
+          style="transform: translate3d(0px, 0px, 0px); width: 456.667px; margin-right: 20px;"
+          v-for="(album, key) in listAlbum"
+          :key="key"
+        >
           <div class="image-wrap">
             <div class="image-info">
               <h2 class="mb-3">{{album.album_name}}</h2>
