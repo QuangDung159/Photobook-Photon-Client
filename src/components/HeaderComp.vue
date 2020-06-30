@@ -17,7 +17,7 @@
                 <a href="index.html">Home</a>
               </li>
               <li class="has-children">
-                <a href="single.html">Gallery</a>
+                <a href="single.html">{{result}}</a>
                 <ul class="dropdown">
                   <li>
                     <a href="#">Nature</a>
@@ -113,7 +113,12 @@
 
 <script>
 export default {
-  name: "HeaderComp"
+  name: "HeaderComp",
+  computed: {
+    result() {
+      return this.$store.state.result;
+    }
+  }
 };
 </script>
 
