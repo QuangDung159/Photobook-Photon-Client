@@ -29,6 +29,9 @@ export default {
   components: {
     HeaderComp,
     FooterComp
+  },
+  mounted() {
+    this.$store.dispatch("getListAlbum");
   }
 };
 </script>

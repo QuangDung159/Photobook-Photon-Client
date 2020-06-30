@@ -26,43 +26,14 @@
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   name: "HomeComp",
   data() {
-    return {
-      listAlbum: []
-    };
+    return {};
   },
-  mounted() {
-    this.getAllAlbumFromApi();
-  },
-  methods: {
-    getAllAlbumFromApi() {
-      axios
-        .get(this.appConfig.API_URL + "/album/get-all")
-        .then(res => {
-          let data = res.data;
-          if (data.statusCode === 200) {
-            this.listAlbum = data.listAlbum;
-          } else {
-            console.log(data.message);
-          }
-        })
-        .catch(err => {
-          console.log(err.message);
-        });
-    }
-  },
-  props: {
-    appConfig: {
-      type: Object,
-      default: () => {
-        return {
-          API_URL: "https://dunglu-back-photomedia.herokuapp.com/api/client"
-        };
-      }
+  computed: {
+    listAlbum() {
+      return this.$store.state.listAlbum;
     }
   }
 };
