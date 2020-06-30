@@ -13,25 +13,22 @@
             role="navigation"
           >
             <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-              <li class="active">
-                <a>Home</a>
+              <li :class="{active: $route.path == '/'}">
+                <router-link :to="'/'">Home</router-link>
               </li>
-              <li class="has-children">
-                <a href="single.html">Gallery</a>
+              <li class="has-children" :class="{active: $route.path.includes('/gallery/')}">
+                <a>Gallery</a>
                 <ul class="dropdown">
                   <li v-for="(album, key) in listAlbum" :key="key">
-                    <a href="#">{{album.album_name}}</a>
+                    <router-link :to="'/gallery/' + album.album_id">{{album.album_name}}</router-link>
                   </li>
                 </ul>
               </li>
-              <li>
-                <a href="services.html">Services</a>
+              <li :class="{active: $route.path == '/about'}">
+                <router-link :to="'/about'">About</router-link>
               </li>
-              <li>
-                <a href="about.html">About</a>
-              </li>
-              <li>
-                <a href="contact.html">Contact</a>
+              <li :class="{active: $route.path == '/contact'}">
+                <router-link :to="'/contact'">Contact</router-link>
               </li>
             </ul>
           </nav>

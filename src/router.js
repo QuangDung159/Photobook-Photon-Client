@@ -1,5 +1,7 @@
 import HomeComp from "./components/HomeComp.vue";
 import GalleryComp from "./components/GalleryComp.vue";
+import AboutComp from "./components/AboutComp.vue";
+import ContactComp from "./components/ContactComp.vue";
 
 const routes = [
     {
@@ -9,6 +11,14 @@ const routes = [
     {
         path: "/gallery/:albumId",
         component: GalleryComp
+    },
+    {
+        path: '/about',
+        component: AboutComp
+    },
+    {
+        path: "/contact",
+        component: ContactComp
     }
 ];
 
