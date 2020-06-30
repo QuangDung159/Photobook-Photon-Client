@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
-import Vuex from "vuex";
 
 import routes from './router';
 import store from "./stores/store";
@@ -9,7 +8,6 @@ import store from "./stores/store";
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
-Vue.use(Vuex);
 
 const router = new VueRouter({
   routes
