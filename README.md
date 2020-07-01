@@ -55,12 +55,10 @@ console.log('server started ' + port);
 
 ``` 
 "scripts": {
-
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "postinstall": "npm run build",
     "start": "node server.js"
-
   }, 
 ```
