@@ -19,7 +19,7 @@
           :data-src="photo.photo_url"
           :data-sub-html="photo.photo_desc"
         >
-          <a href="#">
+          <a href="/">
             <img :src="photo.photo_url" alt="IMage" class="img-fluid cropped1" />
           </a>
         </div>
