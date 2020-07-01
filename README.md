@@ -30,14 +30,17 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Deploy app to Heroku
 
+1. Run
+
 ``` 
-1: Run "npm install express --save"
+npm install express --save
 ```
 
 2: Create server.js at root folder
 
-``` 
 3: Paste following code to server.js
+
+``` 
 var express = require('express');
 var path = require('path');
 var serveStatic = require('serve-static');
@@ -49,6 +52,8 @@ console.log('server started ' + port);
 ```
 
 4: Edit package.js
+
+``` 
 "scripts": {
 
     "serve": "vue-cli-service serve",
@@ -58,3 +63,4 @@ console.log('server started ' + port);
     "start": "node server.js"
 
   }, 
+```
