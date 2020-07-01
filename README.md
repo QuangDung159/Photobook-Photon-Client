@@ -29,15 +29,16 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Deploy app to Heroku
+
 1. Run
 
 ``` 
 npm install express --save
 ```
 
-2: Create server.js at root folder
+2. Create server.js at root folder
 
-3: Paste following code to server.js
+3. Paste following code to server.js
 
 ``` 
 var express = require('express');
@@ -50,7 +51,7 @@ app.listen(port);
 console.log('server started ' + port);
 ```
 
-4: Edit package.js
+4. Edit package.js
 
 ``` 
 "scripts": {
