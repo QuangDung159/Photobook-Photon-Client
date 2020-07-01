@@ -5,7 +5,8 @@ let config = {
         API_URL: 'http://localhost:8000/api/client'
     },
     production: {
-        API_URL: 'https://dunglu-back-photomedia.herokuapp.com/api/client'
+        //API_URL: 'https://dunglu-back-photomedia.herokuapp.com/api/client'
+        API_URL: 'http://localhost:8000/api/client'
     },
 };
 
