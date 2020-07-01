@@ -51,7 +51,7 @@ app.listen(port);
 console.log('server started ' + port);
 ```
 
-4. Edit package.js
+4. Edit package.json
 
 ``` 
 "scripts": {
